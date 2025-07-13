@@ -1,9 +1,4 @@
 ---
-sources:
-  name:      Unofficial Transcript Source Index
-  shortname: Sources
-  path:      sources.html
-  local:     true
 specials:
   name:      Special Episodes - Q&A, Contest Winners, Etc.
   shortname: Specials
