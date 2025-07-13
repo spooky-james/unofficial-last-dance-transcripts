@@ -13,8 +13,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Red Valley Transcripts Archive (Unofficial)
-email: TBA
+site.title: Red Valley Transcripts Archive (Unofficial)
+email: markbecker@gmail.com
 author: spooky-arc
 # description: > # this means to ignore newlines until "baseurl:"
 description: 'Red Valley transcripts in slightly-more-readable format. Mostly converted versions of the official transcripts; the rest have links to the source/transcriber.'
@@ -24,7 +24,7 @@ language: en-us
 # # (http://yourusername.github.io/repository-name)
 # # and NOT your User repository (http://yourusername.github.io)
 # # then add in the baseurl here, like this: "/repository-name"
-# baseurl: "/magnus_archives_transcripts"
+# baseurl: "/unofficial-red-valley-transcripts"
 
 permalink: /:categories/:title:output_ext
 
@@ -36,7 +36,4 @@ collections:
 # Build settings
 markdown: kramdown
 kramdown:
-  auto_ids: false
-
-
-theme: RV-THEME
+  auto_ids: falsE
