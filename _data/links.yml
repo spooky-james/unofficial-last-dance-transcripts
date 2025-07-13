@@ -32,7 +32,7 @@ search:
 github:
   name:      "spooky-arc/unofficial_red_valley_transcripts"
   shortname: GitHub
-  path:      https://github.com/spooky-arc/unofficial-red-valley-transcripts
+  path:      https://spooky-arc.github.io/unofficial-red-valley-transcripts
 warnings:
   name:      Community-Maintained Episode Content Warnings
   shortname: Content Warnings
