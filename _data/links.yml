@@ -35,9 +35,9 @@ search:
   path:      search.html
   local:     true
 github:
-  name:      "Snarp/magnus_archives_transcripts"
+  name:      "spooky-arc/unofficial_red_valley_transcripts"
   shortname: GitHub
-  path:      https://github.com/Snarp/magnus_archives_transcripts
+  path:      https://github.com/spooky-arc/unofficial-red-valley-transcripts
 warnings:
   name:      Community-Maintained Episode Content Warnings
   shortname: Content Warnings
