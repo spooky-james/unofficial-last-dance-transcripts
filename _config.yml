@@ -13,11 +13,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: The Magnus Archives Transcripts Archive Archive A (Extremely Unofficial)
-email: snarp@snarp.work
-author: snarp
+title: Red Valley Transcripts Archive (Unofficial)
+email: TBA
+author: spooky-arc
 # description: > # this means to ignore newlines until "baseurl:"
-description: 'TMA transcripts in slightly-more-readable format. Mostly converted versions of the official transcripts; the rest have links to the source/transcriber.'
+description: 'Red Valley transcripts in slightly-more-readable format. Mostly converted versions of the official transcripts; the rest have links to the source/transcriber.'
 language: en-us
 
 # # If you're hosting your site at a Project repository on GitHub pages
@@ -32,7 +32,11 @@ collections:
   news: 
     output: true
 
+
 # Build settings
 markdown: kramdown
 kramdown:
   auto_ids: false
+
+
+theme: RV-THEME
