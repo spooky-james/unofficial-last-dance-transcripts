@@ -1,9 +1,4 @@
 ---
-specials:
-  name:      Special Episodes - Q&A, Contest Winners, Etc.
-  shortname: Specials
-  path:      specials.html
-  local:     true
 incomplete:
   name:      List of Incomplete Transcripts
   shortname: Incomplete
