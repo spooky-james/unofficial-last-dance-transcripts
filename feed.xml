@@ -18,7 +18,7 @@ layout: null
         <title>{{ post.title | xml_escape }}</title>
         <pubDate>{{post.date | date_to_xmlschema}}</pubDate>
         <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        {% if    post.official %}<source url="{{ post.pdf }}">Rusty Quill Official Transcript</source>{% elsif post.unofficial and post.unofficial_name %}<source url="{{ post.unofficial }}">{{ post.unofficial_name }}</source>{% endif %}
+        {% if    post.official %}<source url="{{ post.pdf }}">Red Valley Official Transcript</source>{% elsif post.unofficial and post.unofficial_name %}<source url="{{ post.unofficial }}">{{ post.unofficial_name }}</source>{% endif %}
         <guid isPermaLink="false">{{ post.id }}</guid>
         <description>{{ post.content | xml_escape }}</description>
         {% for tag in post.tags %}
