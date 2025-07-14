@@ -1,4 +1,9 @@
 ---
+rv:
+  name:     Red Valley
+  shortname: RV
+  path:      rv.html
+  local:     true
 incomplete:
   name:      List of Incomplete Transcripts
   shortname: Incomplete
@@ -25,9 +30,9 @@ search:
   path:      search.html
   local:     true
 github:
-  name:      "spooky-arc/unofficial_red_valley_transcripts"
+  name:      "spooky-arc/transcripts"
   shortname: GitHub
-  path:      https://spooky-arc.github.io/unofficial-red-valley-transcripts
+  path:      https://github.com/spooky-arc/unofficial-red-valley-transcripts
 warnings:
   name:      Community-Maintained Episode Content Warnings
   shortname: Content Warnings
