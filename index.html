@@ -5,31 +5,22 @@ layout: default
 {% include latest-news-bar.html %}
 
 <div class="wrapper">
-<table class="toc-table">
-<thead>
-  <tr>
-    <th colspan="4"><a href="{{ site.baseurl }}/index_reverse.html">⇅ Reverse Sort ⇅</a></th>
-  </tr>
-</thead>
-<tbody>
-{% assign episodes = site.posts | where: "categories", "episode" | reverse %}
-{% for post in episodes %}
-<tr>
-  {% assign url = post.url | prepend: site.baseurl %}
-  <td class="ep-number"><a href="{{ url }}">{{ post.episode_number | escape }}</a></td>
-  <td class="ep-title"><a href="{{ url }}">{{ post.episode_title | escape }}</a></td>
-  <td class="ep-status">
-    {%- if post.trailer %}<a class="trailer" href="{{ url }}">TRAILER</a> {% endif -%}
-    {%- if post.unofficial %}<a class="unofficial" href="{{ url }}">UNOFFICIAL</a> {% endif -%}
-  </td>
-  <td class="ep-date"><a href="{{ url }}">{{ post.date | date: "%Y-%m-%d" }}</a></td>
-</tr>
-{% endfor %}
-</tbody>
-<tfoot>
-  <tr>
-    <td colspan="4"><a href="{{ site.baseurl }}/index_reverse.html">⇅ Reverse Sort ⇅</a></td>
-  </tr>
-</tfoot>
-</table>
+<p>Hi and welcome to the Unoffical Red Valley Transcripts Archive!</p>
+
+<p>The podcast transcripts hosted here so far are:</p>
+<ul>
+    <li><a href="{{ site.baseurl }}/tma/">The Magnus Archives</a></li>
+    <li><a href="{{ site.baseurl }}/rqg/">Rusty Quill Gaming</a></li>
+    <li><a href="{{ site.baseurl }}/tf/">Trice Forgotten</a></li>
+    <li><a href="{{ site.baseurl }}/neon/">Neon Inkwell</a></li>
+    <li><a href="{{ site.baseurl }}/tmagp/">The Magnus Protocol</a></li>
+</ul>
+
+<p>If you find any errors, want to send me a transcript, or have other feedback, please fill out <a href="{{ site.correction_form }}" target="_blank">this Google Form!</a> (You do not need to have a Google account, and no data will be collected other than your response.)</p>
+
+<p>This site was modeled after (and forked from) snarp's <a href="https://snarp.github.io/magnus_archives_transcripts/" target=")blank">Magnus Archives Transcripts Archive Archive A</a>, so all credit for the code and the TMA transcripts comes from there.</p>
+
+<p>Enjoy your stay!</p>
+
+<br/><br/>
 </div><!-- /div.wrapper -->
