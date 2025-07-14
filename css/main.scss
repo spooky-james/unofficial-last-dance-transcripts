@@ -11,7 +11,7 @@ $font-family-serif:      "Libre Baskerville", Baskerville, "Book Antiqua", Georg
 
 // SOLARIZED COLOR SCHEME
  
-$base03:  #002b36 // darkest
+$base03:  #000000 // darkest
 $base02:  #073642;
 $base01:  #586e75;
 $base00:  #657b83;
@@ -59,10 +59,10 @@ $muted-text-color:     $grey-color-light;
 $dark-background-color:     $black-color;
 $dark-text-color:           $red-color;
 $dark-highlight-bg-color:   $off-black-color;
-$dark-highlight-text-color: $grey-color-light;
+$dark-highlight-text-color: $red-color;
 $dark-muted-text-color:     $grey-color-darker;
 
-$brand-color:          $grey-color-dark;
+$brand-color:          $black-color;
 $accent-color:         $red-color;
 $title-color:          $red-color;
 $warning-text-color:   $orange;
