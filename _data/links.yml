@@ -1,6 +1,6 @@
 ---
 rv:
-  name:     Red Valley
+  name:      Red Valley
   shortname: RV
   path:      rv.html
   local:     true
