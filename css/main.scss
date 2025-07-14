@@ -18,7 +18,8 @@ $base00:  #657b83;
 $base0:   #839496;
 $base1:   #93a1a1;
 $base2:   #eee8d5;
-$base3:   #fdf6e3; // lightest
+$base3:   #fdf6e3;
+$base5:   #FFFFFF// lightest
 $yellow:  #b58900;
 $orange:  #cb4b16;
 $base4:   #dc322f;
@@ -38,6 +39,7 @@ $grey-color-light:   $base1;
 $off-white-color:    $base2;
 $white-color:        $base3;
 $red-color:          $base4;
+$very-white-color:   $base5;
 
 // OTHER VARIABLES
 
@@ -50,7 +52,7 @@ $spacing-unit:       $base-line-height;
 $small-font-size:    0.8rem;
 $small-line-height:  $small-font-size * 1.618;
 
-$background-color:     $white-color;
+$background-color:     $very-white-color;
 $text-color:           $grey-color-dark;
 $highlight-bg-color:   $off-white-color;
 $highlight-text-color: $grey-color-darker;
