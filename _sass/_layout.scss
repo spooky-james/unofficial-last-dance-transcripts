@@ -82,7 +82,7 @@ ul#search-results {
     line-height:   37px;
     font-weight:   bold;
     margin-bottom: 0;
-    &,&:visited { color: $red-color; }
+    &,&:visited { color: $title-color; }
     @include media-query($on-palm) { 
         font-size: 1em; 
         line-height: 1.4em;
