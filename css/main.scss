@@ -19,6 +19,7 @@ $base0:   #839496;
 $base1:   #93a1a1;
 $base2:   #eee8d5;
 $base3:   #fdf6e3; // lightest
+$base4:   #dc322f;
 $yellow:  #b58900;
 $orange:  #cb4b16;
 $red:     #dc322f;
@@ -36,6 +37,7 @@ $grey-color:         $base0;
 $grey-color-light:   $base1;
 $off-white-color:    $base2;
 $white-color:        $base3;
+$red-color:          $base4;
 
 // OTHER VARIABLES
 
@@ -55,14 +57,14 @@ $highlight-text-color: $red-color;
 $muted-text-color:     $grey-color-light;
 
 $dark-background-color:     $black-color;
-$dark-text-color:           $red;
+$dark-text-color:           $red-color;
 $dark-highlight-bg-color:   $off-black-color;
 $dark-highlight-text-color: $grey-color-light;
 $dark-muted-text-color:     $grey-color-darker;
 
 $brand-color:          $grey-color-dark;
-$accent-color:         $red;
-$title-color:          $red;
+$accent-color:         $red-color;
+$title-color:          $red-color;
 $warning-text-color:   $orange;
 
 // Width of the content area
