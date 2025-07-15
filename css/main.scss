@@ -14,7 +14,7 @@ $font-family-serif:      "Libre Baskerville", Baskerville, "Book Antiqua", Georg
 $base03:  #000000; // darkest
 $base02:  #073642;
 $base01:  #586e75;
-$base00:  #6c6768;
+$base00:  #657b83;
 $base0:   #839496;
 $base1:   #93a1a1;
 $base2:   #dddddd;
@@ -55,8 +55,8 @@ $small-line-height:  $small-font-size * 1.618;
 $background-color:     $very-white-color;
 $text-color:           $grey-color-dark;
 $highlight-bg-color:   $off-white-color;
-$highlight-text-color: $grey-color-dark;
-$muted-text-color:     $grey-color-dark;
+$highlight-text-color: $grey-color-darker;
+$muted-text-color:     $grey-color-darker;
 $H4-color:             $black-color;
 $H5-color:             $black-color;
 
@@ -82,7 +82,7 @@ $on-laptop:          800px;
 @mixin dark-mode {
   background-color: $dark-background-color;
   color:            $dark-text-color;
-  highlight-text-color: $dark-highlight-text-color;
+  muted-text-color: $white-color;
 }
 
 
