@@ -82,7 +82,7 @@ $on-laptop:          800px;
 @mixin dark-mode {
   background-color: $dark-background-color;
   color:            $dark-text-color;
-  highlight-text-color: $white-color;
+  highlight-text-color: $dark-highlight-text-color;
 }
 
 
