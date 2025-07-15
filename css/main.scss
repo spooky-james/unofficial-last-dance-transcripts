@@ -55,7 +55,7 @@ $small-line-height:  $small-font-size * 1.618;
 $background-color:     $very-white-color;
 $text-color:           $grey-color-dark;
 $highlight-bg-color:   $off-white-color;
-$highlight-text-color: $red-color;
+$highlight-text-color: $grey-color-dark;
 $muted-text-color:     $grey-color-dark;
 $H4-color:             $black-color;
 $H5-color:             $black-color;
@@ -64,7 +64,6 @@ $dark-background-color:     $black-color;
 $dark-text-color:           $white-color;
 $dark-highlight-bg-color:   $black-color;
 $dark-highlight-text-color: $white-color;
-$dark-muted-text-color:     $white-color;
 $dark-H4-color:             $white-color;
 $dark-H5-color:             $white-color;
 
@@ -82,7 +81,7 @@ $on-laptop:          800px;
 @mixin dark-mode {
   background-color: $dark-background-color;
   color:            $dark-text-color;
-  muted-text-color: $white-color;
+  highlight-text-color: $white-color;
 }
 
 
