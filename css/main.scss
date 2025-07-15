@@ -63,7 +63,7 @@ $H5-color:             $black-color;
 
 $dark-background-color:     $black-color;
 $dark-text-color:           $comment-blue-color;
-$dark-highlight-bg-color:   $comment-blue-color;
+$dark-highlight-bg-color:   $black-color;
 $dark-highlight-text-color: $comment-blue-color;
 $dark-muted-text-color:     $comment-blue-color;
 $dark-H4-color:             $white-color;
@@ -83,7 +83,6 @@ $on-laptop:          800px;
 @mixin dark-mode {
   background-color: $dark-background-color;
   color:            $dark-text-color;
-  highlight-text-color: $dark-highlight-text-color;
 }
 
 
