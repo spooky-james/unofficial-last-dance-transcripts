@@ -1,8 +1,6 @@
 <svg width="16" height="16" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <!-- Black background behind everything -->
   <rect x="0" y="0" width="16" height="16" fill="#000" />
-  <!-- Light square background -->
-  <rect x="0" y="0" width="16" height="16" fill="#eee" />
   <!-- Left mountain -->
   <polygon points="0,100 40,40 60,100" fill="#dc322f" stroke="#444" stroke-width="2"/>
   <!-- Right mountain -->
