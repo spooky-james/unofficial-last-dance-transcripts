@@ -6,16 +6,22 @@
     color: $dark-text-color;
     .muted { color: $dark-muted-text-color; }
 
-    h1, h4 { color: $dark-highlight-text-color; }
-    h5 { color: $dark-muted-text-color; }
+    h1, h4 { color: $dark-highlight-text-color !important; }
+    h5 { color: $dark-muted-text-color !important; }
     blockquote {
         background-color: $dark-highlight-bg-color;
     }
     .post-header, .post-footer, .site-header-linkbar {
         background: $dark-highlight-bg-color !important;
-        color:      $dark-highlight-text-color;
+        color:      $dark-highlight-text-color !important;
+        .post-nav a {
+            color: $dark-text-color !important;
+        }
         .post-flags {
             border: 1px dotted $dark-highlight-text-color;
+        }
+        span a {
+            color: $dark-brand-color;
         }
     }
     table.toc-table {
@@ -27,6 +33,10 @@
         td.ep-number a, td.ep-date a { 
             color: $dark-muted-text-color;
         }
+    }
+    %page-title {
+        color:         $dark-brand-color; 
+        a { color:     $dark-brand-color; }
     }
     ul#search-results {
         li:nth-child(odd){ background: $dark-highlight-bg-color; }
@@ -208,36 +218,46 @@ div#cookie-warning {
     @extend %page-title; 
     font-family: $font-family-monospace; 
 }
+h2 {
+    font-size:      1.2rem;
+    @include media-query($on-palm) { font-size: 0.9rem; }
+}
+details .details {
+    border: 1px dashed;
+    padding: 2%;
+}
 
 
 /**
  * POSTS / EPISODES
  */
+
+%speaker-label { // SPEAKER LABEL
+    font-size:   1em; 
+    margin-top:  $spacing-unit; 
+    text-align:  center; 
+    font-weight: bold; 
+    color:       $highlight-text-color; 
+    @include media-query($on-palm) { font-size: $small-font-size; }
+}
+%caption-label { // CAPTION LABEL
+    font-size:      1em; 
+    color:          $muted-text-color; 
+    text-transform: uppercase;
+    @include media-query($on-palm) { font-size: $small-font-size; }
+}
 .post {
     .post-body {
         margin: $spacing-unit 0;
         > .entry-content {
             @include media-query($on-palm) { font-size: $small-font-size; }
-
-            h4 { // SPEAKER LABEL
-                font-size:   1rem; 
-                margin-top:  $spacing-unit; 
-                text-align:  center; 
-                font-weight: bold; 
-                color:       $highlight-text-color; 
-                @include media-query($on-palm) { font-size: $small-font-size; }
-            }
-            h5 { // CAPTION LABEL
-                font-size:      1rem; 
-                color:          $muted-text-color; 
-                text-transform: uppercase;
-                @include media-query($on-palm) { font-size: $small-font-size; }
-            }
+            h4 { @extend %speaker-label; }
+            h5 { @extend %caption-label; }
         }
     }
     .post-header {
         text-align:     center;
-        color:          $grey-color;
+        color:          $grey-color-dark;
         background:     $highlight-bg-color;
         padding:        $spacing-unit 0;
         margin:         0 0 $spacing-unit;
@@ -249,13 +269,11 @@ div#cookie-warning {
         .post-subtitle {
             font-family:     $font-family-monospace;
             font-size:       120%; 
-            color:           $grey-color-light; 
+            color:           $grey-color; 
             display:         flex;
             justify-content: center;
             margin:          $spacing-unit/2 0 0;
-            div { 
-                margin: 0 0.2em; 
-            }
+            div { margin: 0 0.2em; }
         }
         .post-meta {
             font-size:  $base-font-size;
@@ -303,9 +321,6 @@ div#cookie-warning {
             }
         }
 
-        .post-summary {
-
-        }
         .post-flags {
             background:     $dark-highlight-bg-color;
             color:          $dark-highlight-text-color;
@@ -361,6 +376,13 @@ div.footnotes {
     cursor:           pointer; 
 }
 
+.post-form {
+    text-align: center;
+    font-size:  1.0rem;
+    color:      $grey-color-dark;
+    @include media-query($on-palm) { font-size: $small-font-size; }
+}
+
 .post-nav {
     margin:          0;
     display:         flex;
@@ -404,8 +426,8 @@ div.footnotes {
     }
     a {
         font-style: italic;
-        color:      $muted-text-color;
-        &:hover     { color: darken($muted-text-color, 10%); }
+        color:  $muted-text-color;
+        &:hover { color: darken($muted-text-color, 10%); }
     }
 }
 
@@ -416,6 +438,10 @@ div.footnotes {
 .news-post { 
     margin-top: $spacing-unit; margin-bottom: $spacing-unit;
     time { font-style: italic; }
+    blockquote {
+        h4 { @extend %speaker-label; }
+        h5 { @extend %caption-label; }
+    }
 }
 
 
@@ -442,11 +468,12 @@ table.toc-table {
         td, th {
             font-family:   $font-family-monospace;
             margin:        0;
-            padding:       0.4rem;
+            padding:       0.66rem 0.4rem; // top and bottom = 0.66, left and right = 0.4
             font-size:     0.8em;
+            line-height:   1.8 * 0.8em;
             @include media-query($on-palm) { 
-                padding:   0.2rem; 
-                font-size: 0.6em; 
+                padding:   0.66rem 0.2rem; // changes left and right padding to 0.2 instead of 0.4
+                // font-size: 0.6em; 
             }
             a { color: $text-color; }
         }
@@ -469,13 +496,25 @@ table.toc-table {
         td.ep-status { 
             text-align: right; 
             font-weight: bold;
-            a.incomplete { color: $warning-text-color; }
-            @include media-query($on-palm) { padding-right: 0.6rem; }
+            // a.incomplete { color: $warning-text-color; }
+            // a.special { color: $blue; }
+            // a.unofficial {color: $; }
+            // a.trailer {color: $; }
+            // a.epilogue {color: $; }
+            @include media-query($on-palm) { padding-right: 0.4rem; }
         }
         td.ep-date {
             text-align: right; 
             a { color: $muted-text-color; }
             @include media-query($on-palm) { display: none; }
+        }
+        td.ep-podcast { 
+            text-align: right; 
+            font-weight: bold;
+            // a.incomplete { color: $warning-text-color; }
+            // a.special { color: $blue; }
+            // a.trailer {color: $; }
+            @include media-query($on-palm) { padding-right: 0.4rem; }
         }
 
         td.ep-source { // Used in '/sources.html'
@@ -491,6 +530,3 @@ table.toc-table {
  * ERROR PAGES
  */
 h1.error { color: $red; }
-.error {
-    // text-align: center; 
-}
