@@ -9,16 +9,16 @@
 $font-family-monospace:  SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 $font-family-serif:      "Libre Baskerville", Baskerville, "Book Antiqua", Georgia, Times, serif;
 
-// SOLARIZED COLOR SCHEME
+// DRACULA COLOR SCHEME
 
-$base03:  #000000; // darkest
-$base02:  #073642;
-$base01:  #586e75;
-$base00:  #657b83;
+$base03:  #282a36;// darkest
+$base02:  #44475a;
+$base01:  #6272a4;
+$base00:  #f8f8f2;// lightest
 $base0:   #839496;
 $base1:   #93a1a1;
-$base2:   #eee8d5;
-$base3:   #fdf6e3; // lightest
+$base2:   #dddddd;
+$base3:   #fdf6e3;
 $yellow:  #b58900;
 $orange:  #cb4b16;
 $base4:   #dc322f;
@@ -28,16 +28,19 @@ $violet:  #6c71c4;
 $blue:    #268bd2;
 $cyan:    #2aa198;
 $green:   #859900;
+$base5:   #FFFFFF;
 
 $black-color:        $base03;
-$off-black-color:    $base02;
-$grey-color-darker:  $base01;
-$grey-color-dark:    $base00;
+$dark-grey-color:    $base02;
+$comment-blue-color: $base01;
+$cream-color:        $base00;
+
 $grey-color:         $base0;
 $grey-color-light:   $base1;
 $off-white-color:    $base2;
 $white-color:        $base3;
 $red-color:          $base4;
+$very-white-color:   $base5;
 
 // OTHER VARIABLES
 
@@ -50,20 +53,23 @@ $spacing-unit:       $base-line-height;
 $small-font-size:    0.8rem;
 $small-line-height:  $small-font-size * 1.618;
 
-$background-color:     $white-color;
-$text-color:           $grey-color-dark;
+$background-color:     $cream-color;
+$text-color:           $comment-blue-color;
 $highlight-bg-color:   $off-white-color;
-$highlight-text-color: $grey-color-darker;
-$muted-text-color:     $grey-color-light;
+$highlight-text-color: $comment-blue-color;
+$muted-text-color:     $comment-blue-color;
+$H4-color:             $black-color;
+$H5-color:             $black-color;
 
 $dark-background-color:     $black-color;
-$dark-text-color:           $white-color;
+$dark-text-color:           $comment-blue-color;
 $dark-highlight-bg-color:   $black-color;
-$dark-highlight-text-color: $white-color;
-$dark-muted-text-color:     $white-color;
+$dark-highlight-text-color: $comment-blue-color;
+$dark-muted-text-color:     $comment-blue-color;
+$dark-H4-color:             $white-color;
+$dark-H5-color:             $white-color;
 
-$dark-brand-color:     $white-color;
-$brand-color:          $grey-color-dark;
+$brand-color:          $comment-blue-color;
 $accent-color:         $red-color;
 $title-color:          $red-color;
 $warning-text-color:   $red-color;
@@ -75,8 +81,8 @@ $on-laptop:          800px;
 
 
 @mixin dark-mode {
-background-color: $dark-background-color;
-color:            $dark-text-color;
+  background-color: $dark-background-color;
+  color:            $dark-text-color;
 }
 
 
@@ -88,15 +94,15 @@ color:            $dark-text-color;
 //     }
 // }
 @mixin media-query($device) {
-@media screen and (max-width: $device) {
-@content;
-}
+  @media screen and (max-width: $device) {
+    @content;
+  }
 }
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-"fonts", 
-"base",
-"layout"
+  "fonts", 
+  "base",
+  "layout"
 ;
