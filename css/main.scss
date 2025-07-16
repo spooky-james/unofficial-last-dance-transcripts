@@ -54,7 +54,7 @@ $small-font-size:    0.8rem;
 $small-line-height:  $small-font-size * 1.618;
 
 $background-color:     $cream-color;
-$text-color:           $comment-blue-color;
+$text-color:           $black-color;
 $highlight-bg-color:   $off-white-color;
 $highlight-text-color: $comment-blue-color;
 $muted-text-color:     $comment-blue-color;
@@ -69,6 +69,7 @@ $dark-muted-text-color:     $comment-blue-color;
 $dark-H4-color:             $white-color;
 $dark-H5-color:             $white-color;
 
+$dark-brand-color:     $comment-blue-color;
 $brand-color:          $comment-blue-color;
 $accent-color:         $red-color;
 $title-color:          $red-color;
