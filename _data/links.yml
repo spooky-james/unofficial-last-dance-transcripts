@@ -2,7 +2,7 @@
 RedVal:
   name:      Red Valley
   shortname: RedVal
-  path:      rv.html
+  path:      RedVal.html
   local:     true
 incomplete:
   name:      List of Incomplete Transcripts
