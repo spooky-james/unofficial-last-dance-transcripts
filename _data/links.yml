@@ -1,5 +1,10 @@
 ---
-RedVal:
+sources:
+  name:      Unofficial Transcript Source Index
+  shortname: Sources
+  path:      sources.html
+  local:     true
+  RedVal:
   name:      Red Valley
   shortname: RedVal
   path:      RedVal.html
