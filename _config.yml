@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Red Valley Transcripts Archive (Unofficial)
 email: markbecker@gmail.com
-author: spooky-arc
+author: james-spooky
 # description: > # this means to ignore newlines until "baseurl:"
 description: 'Red Valley transcripts in slightly-more-readable format. All are converted versions of the official transcripts.'
 language: en-us
