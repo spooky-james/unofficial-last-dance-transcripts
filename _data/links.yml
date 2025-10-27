@@ -4,10 +4,10 @@ sources:
   shortname: Sources
   path:      sources.html
   local:     true
-  RedVal:
-  name:      Red Valley
-  shortname: RedVal
-  path:      RedVal.html
+  LD:
+  name:      Last Dance
+  shortname: LD
+  path:      LD.html
   local:     true
 incomplete:
   name:      List of Incomplete Transcripts
